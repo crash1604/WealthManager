@@ -1,0 +1,83 @@
+2024-08-16 22:06:09 [ERROR]: Error in UserService - registerUser: mongoose is not defined
+2024-08-16 22:06:09 [ERROR]: Error in UserController - register: mongoose is not defined
+2024-08-16 22:08:42 [ERROR]: Error creating user: Operation `users.insertOne()` buffering timed out after 10000ms
+2024-08-16 22:08:42 [ERROR]: Error in UserService - registerUser: Operation `users.insertOne()` buffering timed out after 10000ms
+2024-08-16 22:08:42 [ERROR]: Error in UserController - register: Operation `users.insertOne()` buffering timed out after 10000ms
+2024-08-16 22:14:47 [ERROR]: Error creating user: Operation `users.insertOne()` buffering timed out after 10000ms
+2024-08-16 22:14:47 [ERROR]: Error in UserService - registerUser: Operation `users.insertOne()` buffering timed out after 10000ms
+2024-08-16 22:14:47 [ERROR]: Error in UserController - register: Operation `users.insertOne()` buffering timed out after 10000ms
+2024-08-16 22:19:42 [ERROR]: Error creating user: Operation `users.insertOne()` buffering timed out after 10000ms
+2024-08-16 22:19:42 [ERROR]: Error in UserService - registerUser: Operation `users.insertOne()` buffering timed out after 10000ms
+2024-08-16 22:19:42 [ERROR]: Error in UserController - register: Operation `users.insertOne()` buffering timed out after 10000ms
+2024-08-16 22:30:18 [ERROR]: Error creating user: Operation `users.insertOne()` buffering timed out after 10000ms
+2024-08-16 22:30:18 [ERROR]: Error in UserService - registerUser: Operation `users.insertOne()` buffering timed out after 10000ms
+2024-08-16 22:30:18 [ERROR]: Error in UserController - register: Operation `users.insertOne()` buffering timed out after 10000ms
+2024-08-16 22:31:53 [ERROR]: Error creating user: Operation `users.insertOne()` buffering timed out after 10000ms
+2024-08-16 22:31:53 [ERROR]: Error in UserService - registerUser: Operation `users.insertOne()` buffering timed out after 10000ms
+2024-08-16 22:31:53 [ERROR]: Error in UserController - register: Operation `users.insertOne()` buffering timed out after 10000ms
+2024-08-16 22:40:50 [INFO]: User with ID 66c00db21aa041f2be173d5e created successfully.
+2024-08-16 22:43:12 [INFO]: User with username johndoe retrieved successfully.
+2024-08-16 22:43:12 [INFO]: User with ID 66c00db21aa041f2be173d5e updated successfully.
+2024-08-16 22:44:04 [ERROR]: Authorization error: invalid signature
+2024-08-16 22:44:14 [ERROR]: Authorization error: invalid signature
+2024-08-16 22:47:44 [ERROR]: Authorization error: invalid signature
+2024-08-16 22:48:41 [ERROR]: Authorization error: invalid token
+2024-08-16 22:49:01 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-16 22:50:16 [INFO]: User with ID 66c00db21aa041f2be173d5e updated successfully.
+2024-08-16 23:05:19 [INFO]: User with username janedoe retrieved successfully.
+2024-08-16 23:05:19 [ERROR]: Error in UserService - loginUser: Invalid credentials
+2024-08-16 23:05:19 [ERROR]: Error in UserController - login: Invalid credentials
+2024-08-16 23:05:35 [INFO]: User with username janedoe retrieved successfully.
+2024-08-16 23:05:35 [ERROR]: Error in UserService - loginUser: Invalid credentials
+2024-08-16 23:05:35 [ERROR]: Error in UserController - login: Invalid credentials
+2024-08-16 23:06:39 [INFO]: User with username johndoe retrieved successfully.
+2024-08-16 23:06:39 [INFO]: User with ID 66c00db21aa041f2be173d5e updated successfully.
+2024-08-16 23:06:39 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-16 23:06:52 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-16 23:06:52 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-16 23:07:45 [INFO]: User with username janedoe retrieved successfully.
+2024-08-16 23:07:45 [ERROR]: Error in UserService - loginUser: Invalid credentials
+2024-08-16 23:07:45 [ERROR]: Error in UserController - login: Invalid credentials
+2024-08-16 23:08:52 [ERROR]: Error creating user: E11000 duplicate key error collection: portfolio_manager.users index: personal_info.email_1 dup key: { personal_info.email: "jane.doe@example.com" }
+2024-08-16 23:08:52 [ERROR]: Error in UserService - registerUser: E11000 duplicate key error collection: portfolio_manager.users index: personal_info.email_1 dup key: { personal_info.email: "jane.doe@example.com" }
+2024-08-16 23:08:52 [ERROR]: Error in UserController - register: E11000 duplicate key error collection: portfolio_manager.users index: personal_info.email_1 dup key: { personal_info.email: "jane.doe@example.com" }
+2024-08-16 23:09:31 [INFO]: User with username janedoe retrieved successfully.
+2024-08-16 23:09:31 [ERROR]: Error in UserService - loginUser: Illegal arguments: undefined, string
+2024-08-16 23:09:31 [ERROR]: Error in UserController - login: Illegal arguments: undefined, string
+2024-08-16 23:09:43 [INFO]: User with username janedoe retrieved successfully.
+2024-08-16 23:09:43 [ERROR]: Error in UserService - loginUser: Invalid credentials
+2024-08-16 23:09:43 [ERROR]: Error in UserController - login: Invalid credentials
+2024-08-16 23:11:04 [ERROR]: Error in UserService - registerUser: Illegal arguments: undefined, string
+2024-08-16 23:11:04 [ERROR]: Error in UserController - register: Illegal arguments: undefined, string
+2024-08-16 23:11:32 [ERROR]: Error in UserService - registerUser: Illegal arguments: undefined, string
+2024-08-16 23:11:32 [ERROR]: Error in UserController - register: Illegal arguments: undefined, string
+2024-08-16 23:11:46 [ERROR]: Error in UserService - registerUser: Illegal arguments: undefined, string
+2024-08-16 23:11:46 [ERROR]: Error in UserController - register: Illegal arguments: undefined, string
+2024-08-16 23:15:33 [INFO]: User with ID 66c015d5e7743c3bc898dcb3 created successfully.
+2024-08-16 23:16:12 [INFO]: User with username janedoe retrieved successfully.
+2024-08-16 23:16:13 [INFO]: User with ID 66c015d5e7743c3bc898dcb3 updated successfully.
+2024-08-16 23:16:13 [INFO]: User with ID 66c015d5e7743c3bc898dcb3 retrieved successfully.
+2024-08-16 23:23:15 [INFO]: User with ID 66c015d5e7743c3bc898dcb3 retrieved successfully.
+2024-08-16 23:23:30 [INFO]: User with ID 66c015d5e7743c3bc898dcb3 retrieved successfully.
+2024-08-16 23:24:10 [INFO]: User with ID 66c015d5e7743c3bc898dcb3 retrieved successfully.
+2024-08-16 23:24:10 [INFO]: User with ID 66c015d5e7743c3bc898dcb3 retrieved successfully.
+2024-08-16 23:24:21 [INFO]: User with username janedoe retrieved successfully.
+2024-08-16 23:24:21 [INFO]: User with ID 66c015d5e7743c3bc898dcb3 updated successfully.
+2024-08-16 23:24:21 [INFO]: User with ID 66c015d5e7743c3bc898dcb3 retrieved successfully.
+2024-08-16 23:24:23 [INFO]: User with ID 66c015d5e7743c3bc898dcb3 retrieved successfully.
+2024-08-16 23:24:23 [INFO]: User with ID 66c015d5e7743c3bc898dcb3 retrieved successfully.
+2024-08-16 23:26:22 [INFO]: User with username janedoe retrieved successfully.
+2024-08-16 23:26:22 [INFO]: User with ID 66c015d5e7743c3bc898dcb3 updated successfully.
+2024-08-16 23:26:22 [INFO]: User with ID 66c015d5e7743c3bc898dcb3 retrieved successfully.
+2024-08-16 23:26:30 [INFO]: User with ID 66c015d5e7743c3bc898dcb3 retrieved successfully.
+2024-08-16 23:26:31 [INFO]: User with ID 66c015d5e7743c3bc898dcb3 retrieved successfully.
+2024-08-16 23:31:07 [INFO]: User with username johndoe retrieved successfully.
+2024-08-16 23:31:07 [INFO]: User with ID 66c00db21aa041f2be173d5e updated successfully.
+2024-08-16 23:31:07 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-16 23:31:13 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-16 23:31:13 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-16 23:33:01 [INFO]: User with username johndoe retrieved successfully.
+2024-08-16 23:33:01 [INFO]: User with ID 66c00db21aa041f2be173d5e updated successfully.
+2024-08-16 23:33:02 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-16 23:33:20 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-16 23:33:20 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
