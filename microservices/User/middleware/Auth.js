@@ -4,7 +4,8 @@ const logger = require('../utils/logger');
 const JWT_SECRET = process.env.JWT_SECRET || 'your_jwt_secret';
 
 module.exports = function(req, res, next) {
-    const token = req.header('Authorization').replace('Bearer ', '');
+    // Retrieve the token from the cookies
+    const token = req.cookies.jwt;
 
     if (!token) {
         logger.warn('Authorization denied: No token provided.');

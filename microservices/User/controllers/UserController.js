@@ -19,7 +19,15 @@ class UserController {
 
         try {
             const { token } = await UserService.loginUser(username, password);
-            res.status(200).json({ token });
+
+            // Set the JWT token in a secure, HTTP-only cookie
+            res.cookie('jwt', token, {
+                httpOnly: true,
+                secure: process.env.NODE_ENV === 'production', // Ensure secure in production
+                maxAge: 24 * 60 * 60 * 1000 // 1 day
+            });
+
+            res.status(200).json({ message: 'Login successful' });
         } catch (error) {
             logger.error(`Error in UserController - login: ${error.message}`);
             res.status(400).json({ message: 'Invalid credentials' });
@@ -52,7 +60,12 @@ class UserController {
     }
 
     async logout(req, res) {
-        // JWT is stateless; therefore, logout can be handled on the client side
+        // Clear the JWT cookie
+        res.clearCookie('jwt', {
+            httpOnly: true,
+            secure: process.env.NODE_ENV === 'production'
+        });
+
         res.status(200).json({ message: 'Logged out successfully' });
     }
 }

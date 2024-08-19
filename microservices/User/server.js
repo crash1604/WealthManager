@@ -3,13 +3,19 @@ const express = require('express');
 const cors = require('cors'); 
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 const UserController = require('./controllers/UserController');
 const auth = require('./middleware/auth');
 
 const app = express();
 
-app.use(cors());
+// Middleware setup
+app.use(cors({
+    origin: 'http://localhost:3000', // Replace with your frontend URL
+    credentials: true, // Allow credentials (cookies)
+}));
 app.use(bodyParser.json());
+app.use(cookieParser()); // Enable cookie parsing
 
 const PORT = process.env.PORT || 5001;
 const MONGO_URI = process.env.MONGO_URI || 'your_mongo_uri';
@@ -26,7 +32,6 @@ mongoose.connect(MONGO_URI, {
     console.error('MongoDB connection error:', err.message);
     process.exit(1);
   });
-  
 
 // Routes
 app.post('/api/users/register', UserController.register);

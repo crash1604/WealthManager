@@ -81,3 +81,50 @@
 2024-08-16 23:33:02 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
 2024-08-16 23:33:20 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
 2024-08-16 23:33:20 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-19 17:37:16 [WARN]: Authorization denied: No token provided.
+2024-08-19 17:37:16 [WARN]: Authorization denied: No token provided.
+2024-08-19 17:42:55 [INFO]: User with username johndoe retrieved successfully.
+2024-08-19 17:42:56 [INFO]: User with ID 66c00db21aa041f2be173d5e updated successfully.
+2024-08-19 17:42:56 [WARN]: Authorization denied: No token provided.
+2024-08-19 17:45:27 [INFO]: User with username johndoe retrieved successfully.
+2024-08-19 17:45:27 [WARN]: Authorization denied: No token provided.
+2024-08-19 17:45:27 [INFO]: User with ID 66c00db21aa041f2be173d5e updated successfully.
+2024-08-19 17:45:27 [WARN]: Authorization denied: No token provided.
+2024-08-19 17:46:03 [WARN]: Authorization denied: No token provided.
+2024-08-19 17:46:03 [WARN]: Authorization denied: No token provided.
+2024-08-19 17:48:52 [INFO]: User with username janedoe retrieved successfully.
+2024-08-19 17:48:52 [INFO]: User with ID 66c015d5e7743c3bc898dcb3 updated successfully.
+2024-08-19 17:48:53 [INFO]: User with ID 66c015d5e7743c3bc898dcb3 retrieved successfully.
+2024-08-19 17:49:09 [INFO]: User with ID 66c015d5e7743c3bc898dcb3 retrieved successfully.
+2024-08-19 17:49:10 [INFO]: User with ID 66c015d5e7743c3bc898dcb3 retrieved successfully.
+2024-08-19 17:49:20 [INFO]: User with username johndoe retrieved successfully.
+2024-08-19 17:49:20 [INFO]: User with ID 66c00db21aa041f2be173d5e updated successfully.
+2024-08-19 17:49:20 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-19 17:49:23 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-19 17:49:23 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-19 17:53:26 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-19 17:53:26 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-19 17:54:52 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-19 17:54:59 [INFO]: User with username johndoe retrieved successfully.
+2024-08-19 17:55:00 [INFO]: User with ID 66c00db21aa041f2be173d5e updated successfully.
+2024-08-19 17:55:00 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-19 17:55:02 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-19 17:55:02 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-19 17:55:44 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-19 17:56:01 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-19 17:57:24 [INFO]: User with username johndoe retrieved successfully.
+2024-08-19 17:57:24 [INFO]: User with ID 66c00db21aa041f2be173d5e updated successfully.
+2024-08-19 17:57:24 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-19 18:01:23 [INFO]: User with username johndoe retrieved successfully.
+2024-08-19 18:01:23 [INFO]: User with ID 66c00db21aa041f2be173d5e updated successfully.
+2024-08-19 18:01:23 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-19 18:03:34 [INFO]: User with username janedoe retrieved successfully.
+2024-08-19 18:03:34 [INFO]: User with ID 66c015d5e7743c3bc898dcb3 updated successfully.
+2024-08-19 18:04:41 [INFO]: User with ID 66c015d5e7743c3bc898dcb3 retrieved successfully.
+2024-08-19 18:05:28 [INFO]: User with ID 66c015d5e7743c3bc898dcb3 retrieved successfully.
+2024-08-19 18:06:11 [INFO]: User with ID 66c015d5e7743c3bc898dcb3 retrieved successfully.
+2024-08-19 18:09:23 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-19 18:11:15 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-19 18:11:15 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-19 18:11:30 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-19 18:11:30 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
