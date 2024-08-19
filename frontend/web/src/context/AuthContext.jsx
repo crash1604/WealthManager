@@ -2,8 +2,8 @@ import React, { createContext, useState, useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-
 axios.defaults.baseURL = 'http://localhost:5001'; // Replace with your backend URL
+axios.defaults.withCredentials = true; // Important: allows cookies to be sent with requests
 
 const AuthContext = createContext();
 
@@ -15,55 +15,48 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    // Check if the user is already logged in by checking localStorage for a token
-    const token = localStorage.getItem('token');
-    if (token) {
-      // Verify token with the backend
-      axios.get('/api/users/profile', {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
-      }).then(response => {
-        setUser(response.data);
-      }).catch(error => {
-        console.error("Token verification failed", error);
-        localStorage.removeItem('token');
+  // Function to load the user profile from the backend
+  const loadUserProfile = async () => {
+    try {
+      const response = await axios.get('/api/users/profile');
+      setUser({
+        first_name: response.data.personal_info.first_name,
+        last_name: response.data.personal_info.last_name,
+        email: response.data.personal_info.email
       });
+    } catch (error) {
+      console.error("Token verification failed", error);
+      setUser(null);
     }
+  };
+
+  useEffect(() => {
+    loadUserProfile(); // Load user profile on component mount
   }, []);
-  
 
   const login = async (username, password) => {
     try {
-      const response = await axios.post('/api/users/login', { username, password });
-      const token = response.data.token;
-  
-      // Store the token in localStorage
-      localStorage.setItem('token', token);
-  
-      // Set the user state with user info (optional)
-      const userProfile = await axios.get('/api/users/profile', {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
-      });
-      setUser(userProfile.data);
-  
+      await axios.post('/api/users/login', { username, password });
+
+      // Fetch user profile after login
+      await loadUserProfile();
+
       navigate('/dashboard');
     } catch (error) {
       alert('Invalid credentials');
       console.error('Login error:', error);
     }
   };
-  
-  const logout = () => {
-    // Clear the token from localStorage
-    localStorage.removeItem('token');
-    setUser(null);
-    navigate('/');
+
+  const logout = async () => {
+    try {
+      await axios.post('/api/users/logout');
+      setUser(null);
+      navigate('/');
+    } catch (error) {
+      console.error('Logout error:', error);
+    }
   };
-  
 
   return (
     <AuthContext.Provider value={{ user, login, logout }}>

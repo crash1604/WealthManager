@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
+import { useAuth } from '../../context/AuthContext'; // Make sure the path to AuthContext is correct
 
 const User = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { user, logout } = useAuth(); // Access the user data and logout function
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleLogout = (e) => {
+    e.preventDefault();
+    logout(); // Call the logout function from AuthContext
   };
 
   return (
@@ -24,28 +31,33 @@ const User = () => {
           className="z-10 absolute right-0 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
         >
           <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
-            <div>Bonnie Green</div>
-            <div className="font-medium truncate">name@flowbite.com</div>
+            {/* Use the user data */}
+            <div>{user?.first_name} {user?.last_name}</div>
+            <div className="font-medium truncate">{user?.email}</div>
           </div>
           <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="avatarButton">
             <li>
               <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                Dashboard
+                Edit Profile
               </a>
             </li>
             <li>
               <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                Settings
+                Privacy Settings
               </a>
             </li>
             <li>
               <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                Earnings
+                Tax forms
               </a>
             </li>
           </ul>
           <div className="py-1">
-            <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+            <a 
+              href="#" 
+              onClick={handleLogout} // Handle logout when clicked
+              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+            >
               Sign out
             </a>
           </div>
