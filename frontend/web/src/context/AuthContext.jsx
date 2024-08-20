@@ -38,7 +38,7 @@ export const AuthProvider = ({ children }) => {
     try {
       await axios.post('/api/users/login', { username, password });
 
-      // Fetch user profile after login
+      // // Fetch user profile after login
       await loadUserProfile();
 
       navigate('/dashboard');

@@ -128,3 +128,33 @@
 2024-08-19 18:11:15 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
 2024-08-19 18:11:30 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
 2024-08-19 18:11:30 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-19 20:02:05 [ERROR]: Authorization error: jwt malformed
+2024-08-19 20:02:06 [ERROR]: Authorization error: jwt malformed
+2024-08-19 20:02:15 [INFO]: User with username johndoe retrieved successfully.
+2024-08-19 20:02:16 [INFO]: User with ID 66c00db21aa041f2be173d5e updated successfully.
+2024-08-19 20:02:16 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-19 20:02:24 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-19 20:02:24 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-19 20:02:32 [INFO]: User with username johndoe retrieved successfully.
+2024-08-19 20:02:32 [INFO]: User with ID 66c00db21aa041f2be173d5e updated successfully.
+2024-08-19 20:02:32 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-19 20:03:48 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-19 20:03:51 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-19 20:03:51 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-19 20:32:54 [WARN]: User with username admin not found.
+2024-08-19 20:32:54 [ERROR]: Error in UserService - loginUser: Invalid credentials
+2024-08-19 20:32:54 [ERROR]: Error in UserController - login: Invalid credentials
+2024-08-19 20:33:04 [WARN]: Authorization denied: No token provided.
+2024-08-19 20:33:04 [WARN]: Authorization denied: No token provided.
+2024-08-19 20:42:12 [WARN]: Authorization denied: No token provided.
+2024-08-19 20:42:12 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-19 20:42:48 [WARN]: User with username admin not found.
+2024-08-19 20:42:48 [ERROR]: Error in UserService - loginUser: Invalid credentials
+2024-08-19 20:42:48 [ERROR]: Error in UserController - login: Invalid credentials
+2024-08-19 20:42:56 [INFO]: User with username johndoe retrieved successfully.
+2024-08-19 20:42:56 [INFO]: User with ID 66c00db21aa041f2be173d5e updated successfully.
+2024-08-19 20:42:56 [INFO]: User with ID 66c00db21aa041f2be173d5e retrieved successfully.
+2024-08-19 21:54:50 [ERROR]: Authorization error: jwt expired
+2024-08-19 21:54:59 [INFO]: User with username janedoe retrieved successfully.
+2024-08-19 21:54:59 [INFO]: User with ID 66c015d5e7743c3bc898dcb3 updated successfully.
+2024-08-19 21:55:08 [INFO]: User with ID 66c015d5e7743c3bc898dcb3 retrieved successfully.
