@@ -3,7 +3,8 @@ import React from 'react';
 const PortfolioManagement = () => {
   return (
     <div>
-      {/* Add Portfolio Management content here */}
+      AG grid component 
+      
     </div>
   );
 }
