@@ -1,40 +1,79 @@
 const passport = require('passport');
-const LocalStrategy = require('passport-local').Strategy;
-const bcrypt = require('bcrypt');
-const db = require('../db');
+const GoogleStrategy = require('passport-google-oauth20').Strategy;
+const GitHubStrategy = require('passport-github2').Strategy;
+const oauthConfig = require('./oauth.config');
+const User = require('../models/User.model');
 
-// Local strategy for username/password login
-passport.use(new LocalStrategy(
-    async (username, password, done) => {
-        try {
-            const user = await db.getUserByUsername(username);
-            if (!user) {
-                return done(null, false, { message: 'Incorrect username.' });
-            }
-            const match = await bcrypt.compare(password, user.password);
-            if (!match) {
-                return done(null, false, { message: 'Incorrect password.' });
-            }
-            return done(null, user);
-        } catch (err) {
-            return done(err);
-        }
-    }
-));
-
-// Serialize user to store in session
+// Serialize user
 passport.serializeUser((user, done) => {
-    done(null, user.id);
+  done(null, user.id);
 });
 
-// Deserialize user from session
+// Deserialize user
 passport.deserializeUser(async (id, done) => {
-    try {
-        const user = await db.getUserById(id);
-        done(null, user);
-    } catch (err) {
-        done(err);
-    }
+  try {
+    const user = await User.findById(id);
+    done(null, user);
+  } catch (error) {
+    done(error, null);
+  }
 });
+
+// Google Strategy
+passport.use(new GoogleStrategy({
+  clientID: oauthConfig.google.clientID,
+  clientSecret: oauthConfig.google.clientSecret,
+  callbackURL: oauthConfig.google.callbackURL,
+  scope: ['profile', 'email']
+}, async (accessToken, refreshToken, profile, done) => {
+  try {
+    let user = await User.findOne({ email: profile.emails[0].value });
+    
+    if (!user) {
+      user = new User({
+        provider: 'google',
+        providerId: profile.id,
+        email: profile.emails[0].value,
+        name: profile.displayName,
+        avatar: profile.photos[0].value
+      });
+      await user.save();
+    }
+    
+    return done(null, user);
+  } catch (error) {
+    return done(error, null);
+  }
+}));
+
+// GitHub Strategy
+passport.use(new GitHubStrategy({
+  clientID: oauthConfig.github.clientID,
+  clientSecret: oauthConfig.github.clientSecret,
+  callbackURL: oauthConfig.github.callbackURL,
+  scope: ['user:email']
+}, async (accessToken, refreshToken, profile, done) => {
+  try {
+    // GitHub may not return email in profile
+    const email = profile.emails ? profile.emails[0].value : `${profile.username}@users.noreply.github.com`;
+    
+    let user = await User.findOne({ email });
+    
+    if (!user) {
+      user = new User({
+        provider: 'github',
+        providerId: profile.id,
+        email,
+        name: profile.displayName || profile.username,
+        avatar: profile.photos[0].value
+      });
+      await user.save();
+    }
+    
+    return done(null, user);
+  } catch (error) {
+    return done(error, null);
+  }
+}));
 
 module.exports = passport;
